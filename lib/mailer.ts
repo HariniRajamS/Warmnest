@@ -1,5 +1,13 @@
 import nodemailer from "nodemailer";
 
+interface Booking {
+  email: string;
+  name: string;
+  status: string;
+  adminComment?: string;
+  alternateSlots?: Array<{ date: string; time: string; timezone: string }>;
+}
+
 export const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -23,7 +31,7 @@ export async function sendAppointmentMail(
       <p>Your appointment request has been received successfully.</p>
       <p><strong>Date:</strong> ${date}</p>
       <p><strong>Time:</strong> ${time}</p>
-      <p>Status: <b style="color:orange">Pending</b></p>
+export async function sendApprovalMail(booking: Booking) {
       <br/>
       <p>We will contact you once the therapist confirms.</p>
       <p>Warmnest Team 💚</p>
@@ -31,10 +39,13 @@ export async function sendAppointmentMail(
   });
 }
 
-export async function sendApprovalMail(booking: any) {
+export async function sendApprovalMail(booking: Booking) {
   const slotList = booking.alternateSlots?.length
     ? booking.alternateSlots
-        .map((s: any) => `<li>${s.date} at ${s.time} (${s.timezone})</li>`)
+        .map(
+          (s: { date: string; time: string; timezone: string }) =>
+            `<li>${s.date} at ${s.time} (${s.timezone})</li>`
+        )
         .join("")
     : "";
 
