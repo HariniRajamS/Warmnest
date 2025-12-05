@@ -38,8 +38,6 @@ export default function PaymentPage() {
   const handlePay = () => {
     if (country === "IN") {
       window.location.href = `/api/payment/razorpay?appointmentId=${appointmentId}`;
-    } else {
-      window.location.href = `/api/payment/stripe?appointmentId=${appointmentId}`;
     }
   };
 
