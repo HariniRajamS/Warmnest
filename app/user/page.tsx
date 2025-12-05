@@ -250,10 +250,10 @@ const UserPage: React.FC = () => {
                       <p>{a.adminComment}</p>
                     </div>
                   )}
-                  {a.alternateSlots?.length > 0 && (
+                  {(a.alternateSlots ?? []).length > 0 && (
                     <div className={styles.altSlots}>
                       <strong>Suggested Slots:</strong>
-                      {a.alternateSlots.map((s, i) => (
+                      {(a.alternateSlots ?? []).map((s, i) => (
                         <p key={i}>
                           {s.date} — {s.time} ({s.timezone})
                         </p>
