@@ -1,0 +1,170 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ecfdf5, #ffffff);
+}
+
+/* Banner */
+.hero {
+  text-align: center;
+  padding: 40px 20px 10px;
+}
+
+.hero h1 {
+  color: #065f46;
+  font-size: 1.6rem;
+}
+
+.hero p {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* Center Wrapper */
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  padding-bottom: 40px;
+}
+
+/* Booking Card */
+.card {
+  width: 94%;
+  max-width: 420px;
+  background: white;
+  padding: 26px;
+  border-radius: 22px;
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  text-align: center;
+  color: #047857;
+  margin-bottom: 4px;
+}
+
+.sub {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 18px;
+}
+
+/* FORM ELEMENTS — SCOPED */
+.card label {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+
+.card input,
+.card textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border-radius: 10px;
+  border: 1px solid #d1fae5;
+  background: #f9fafb;
+}
+
+.card input:disabled {
+  background: #ecfdf5;
+}
+
+/* Textarea */
+.card textarea {
+  resize: none;
+  height: 70px;
+}
+
+/* Button */
+.card button {
+  margin-top: 18px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #34d399;
+  color: white;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.card button:hover {
+  background: #059669;
+}
+.appointments {
+  margin-top: 24px;
+}
+
+.appointments h3 {
+  font-size: 0.95rem;
+  color: #047857;
+  margin-bottom: 10px;
+}
+
+.appointmentCard {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #ecfdf5;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.pending {
+  color: orange;
+  font-weight: bold;
+}
+.pending {
+  color: #92400e;
+  background: #fef3c7;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.approved {
+  color: #166534;
+  background: #dcfce7;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.rejected {
+  color: #991b1b;
+  background: #fee2e2;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.adminNote {
+  margin-top: 8px;
+  background: #f0fdf4;
+  padding: 8px;
+  border-left: 4px solid #22c55e;
+  border-radius: 8px;
+}
+
+.altSlots {
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+.payBtn {
+  margin-top: 12px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.payBtn:hover {
+  background: #4f46e5;
+}
+.noAppointments {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 20px;
+}

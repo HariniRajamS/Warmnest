@@ -1,0 +1,39 @@
+/* ✅ SAFE global reset */
+:global(html) {
+  scroll-behavior: smooth;
+}
+
+:global(body) {
+  margin: 0;
+  background-color: #f6fff8;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111827;
+}
+
+/* ✅ Only essential global resets */
+:global(*),
+:global(*::before),
+:global(*::after) {
+  box-sizing: border-box;
+}
+
+/* ✅ Allow images to scale */
+:global(img) {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ✅ Links */
+:global(a) {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ✅ Buttons baseline */
+:global(button) {
+  font-family: inherit;
+}
+
+:global(section) {
+  padding-block: 40px;
+}

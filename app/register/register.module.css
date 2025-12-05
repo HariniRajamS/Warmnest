@@ -1,0 +1,90 @@
+.container {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #ecfdf5, #ffffff);
+}
+
+.card {
+  width: 92%;
+  max-width: 420px;
+  background: white;
+  padding: 38px 32px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  color: #065f46;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.avatar {
+  margin: 20px 0;
+}
+
+.avatar img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #34d399;
+}
+
+.avatar label {
+  display: block;
+  margin-top: 8px;
+  color: #047857;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.form {
+  margin-top: 16px;
+}
+
+.form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1fae5;
+  font-size: 0.9rem;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #34d399;
+}
+
+.form button {
+  width: 100%;
+  padding: 12px;
+  background: #34d399;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: 0.2s ease;
+}
+
+.form button:hover {
+  background: #059669;
+}
+
+.footer {
+  margin-top: 14px;
+  font-size: 0.85rem;
+}
+
+.footer a {
+  color: #047857;
+  font-weight: 600;
+}

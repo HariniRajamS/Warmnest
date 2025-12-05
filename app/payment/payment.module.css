@@ -1,0 +1,105 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ecfdf5, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 92%;
+  max-width: 420px;
+  background: white;
+  padding: 24px;
+  border-radius: 22px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.title {
+  font-size: 1.7rem;
+  color: #065f46;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 14px;
+}
+
+.section h3 {
+  font-size: 0.85rem;
+  color: #047857;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.section p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.email {
+  color: #6b7280;
+  font-size: 0.8rem;
+}
+
+.approved {
+  color: #166534;
+  background: #dcfce7;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.priceBox {
+  margin: 20px 0;
+  background: #f0fdf4;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.priceLabel {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #047857;
+}
+
+.price {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #065f46;
+}
+
+.payBtn {
+  width: 100%;
+  padding: 12px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.payBtn:hover {
+  background: #4f46e5;
+}
+
+.footer {
+  margin-top: 10px;
+  font-size: 0.7rem;
+  color: #9ca3af;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 50px;
+}
