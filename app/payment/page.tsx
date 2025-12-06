@@ -14,8 +14,9 @@ interface Appointment {
   status: string;
 }
 
-export default function PaymentPage() {
-  const params = useSearchParams();
+/* ✅ CHILD COMPONENT */
+function PaymentContent() {
+  const params = useSearchParams(); // ✅ now INSIDE Suspense
   const appointmentId = params.get("appointmentId");
 
   const [appointment, setAppointment] = useState<Appointment | null>(null);
@@ -44,48 +45,55 @@ export default function PaymentPage() {
   if (!appointment) return <p className={styles.loading}>Loading...</p>;
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <div className={styles.page}>
-        <div className={styles.card}>
-          <h1 className={styles.title}>Confirm & Pay</h1>
-          <p className={styles.subtitle}>Complete payment to confirm session</p>
+    <div className={styles.page}>
+      <div className={styles.card}>
+        <h1 className={styles.title}>Confirm & Pay</h1>
+        <p className={styles.subtitle}>Complete payment to confirm session</p>
 
-          <div className={styles.section}>
-            <h3>Therapist</h3>
-            <p>Aishwarya Krish</p>
-          </div>
-
-          <div className={styles.section}>
-            <h3>Client</h3>
-            <p>{appointment.name}</p>
-            <p className={styles.email}>{appointment.email}</p>
-          </div>
-
-          <div className={styles.section}>
-            <h3>Appointment</h3>
-            <p>{appointment.date}</p>
-            <p>
-              {appointment.time} ({appointment.timezone})
-            </p>
-          </div>
-
-          <div className={styles.section}>
-            <h3>Status</h3>
-            <span className={styles.approved}>{appointment.status}</span>
-          </div>
-
-          <div className={styles.priceBox}>
-            <p className={styles.priceLabel}>Session Fee</p>
-            <p className={styles.price}>{country === "IN" ? "₹1199" : "$15"}</p>
-          </div>
-
-          <button onClick={handlePay} className={styles.payBtn}>
-            Pay Now
-          </button>
-
-          <p className={styles.footer}>Secure payment • Encrypted checkout</p>
+        <div className={styles.section}>
+          <h3>Therapist</h3>
+          <p>Aishwarya Krish</p>
         </div>
+
+        <div className={styles.section}>
+          <h3>Client</h3>
+          <p>{appointment.name}</p>
+          <p className={styles.email}>{appointment.email}</p>
+        </div>
+
+        <div className={styles.section}>
+          <h3>Appointment</h3>
+          <p>{appointment.date}</p>
+          <p>
+            {appointment.time} ({appointment.timezone})
+          </p>
+        </div>
+
+        <div className={styles.section}>
+          <h3>Status</h3>
+          <span className={styles.approved}>{appointment.status}</span>
+        </div>
+
+        <div className={styles.priceBox}>
+          <p className={styles.priceLabel}>Session Fee</p>
+          <p className={styles.price}>{country === "IN" ? "₹1199" : "$15"}</p>
+        </div>
+
+        <button onClick={handlePay} className={styles.payBtn}>
+          Pay Now
+        </button>
+
+        <p className={styles.footer}>Secure payment • Encrypted checkout</p>
       </div>
+    </div>
+  );
+}
+
+/* ✅ PARENT WRAPPER */
+export default function PaymentPage() {
+  return (
+    <Suspense fallback={<div>Loading payment…</div>}>
+      <PaymentContent />
     </Suspense>
   );
 }
